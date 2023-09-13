@@ -1,0 +1,199 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site4.master.cs" Inherits="WebApplication2.Site4" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<style>
+    body {
+        padding:0px;
+        margin:0px;
+        min-height: 100vh;
+        background-color:#affdff46;
+    }
+
+    .div1{
+        margin-left:90px;
+        position:relative;
+    }
+
+    .log {
+        height:60px;
+        width:300px;
+        right:0;
+        position:absolute;
+        top: -8px;
+    }
+
+    .imgBtn {
+        width:60px;
+        height:60px;
+        float:left;
+        border-radius:5px;
+        transition:all .5s ease-in-out;
+    }
+
+    .imgBtn:hover {
+        transition:all .5s ease-in-out;
+        transform:scale(1.15);
+    }
+
+    .log p {
+        margin:5px 0 0 80px;
+        font-size:18px;
+        
+    }
+
+    .div2 {
+        height :40px;
+        margin:auto;
+        background-color:orange;
+    }
+    .div2 ul{
+        list-style:none;
+        overflow:hidden;
+        padding-bottom:10px;
+    }
+    .div2 li {
+        float:left;
+        margin:10px 30px 0 50px;
+    }
+    .div2 li a{
+        text-decoration:none;
+        color:white;
+        font-weight:bolder;
+        background-color:orange;
+        transition:all .5s ease-in-out;
+        padding:10px 30px 9px 30px;
+    }
+
+    .div2 li a:hover {
+        transition:all .5s ease-in-out;
+        background-color:white;
+        color:black;
+        border-radius:30px;
+    }
+
+    .div5{
+        
+        clear:left;
+        
+    }
+
+    .div3 {
+        background-color:white;
+        float:left;
+        margin:0 0 0 290px;
+        width:280px;
+        height:488px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        overflow:hidden;
+    }
+
+    .div4 {
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        background-color:white;
+        margin:35px 0 0 650px;
+        width:950px;
+        height:540px;
+    }
+
+    .img {
+        
+        width:18px;
+        height:18px;
+    }
+
+
+
+    .div3 ul {    
+        padding:0;
+        margin:0;
+    }
+
+    .div3 li {
+        clear:left;
+        
+        padding:15px 0px;
+    }
+
+    .div3 a {
+        padding:15px 116px;
+        color:black;
+        text-decoration:none;
+        font-size:24px;
+        font-weight:bolder;
+        transition:all .5s ease-in-out;
+    }
+
+    .div3 a:hover{
+        background-color:orange;
+        color:white;
+        box-shadow: -15px 30px 50px rgba(0,0,0,0.5);
+        transform: scale(1.15) translateX(30px) translateY(-15px);
+        transition:all .5s ease-in-out;
+        
+    }
+
+
+    
+</style>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="div1">
+        
+
+        <div class="log">
+            <asp:ImageButton ID="ImageButton1" CssClass="imgBtn" runat="server" ImageUrl="~/img/未登录的头像.jpg" OnClick="ImageButton1_Click" />
+            <p><asp:Label ID="Label1" runat="server" Text="用户名："></asp:Label> <asp:Image ID="Image1" CssClass="img" runat="server" /></p>
+            <p>  <asp:Label ID="Label2" runat="server" Text="会员等级："></asp:Label></p>
+            
+        </div>
+
+        <h1>DingDong.com</h1>
+
+    </div>
+    <div class="div2">
+        <ul>
+            <li><a href="Home.aspx">首页</a></li>
+            <li><a href="Table.aspx">简历登记表</a></li>           
+            <li><a href="likePage.aspx">站长推荐</a></li>
+        </ul>
+    </div>
+
+    <div class="div5">
+
+        <div class="div3">
+
+         <ul>
+            <li><a href="Home.aspx">首页</a></li>
+            <li><a href="Art.aspx">艺术</a></li>           
+            <li><a href="Child.aspx">儿童</a></li>
+            <li><a href="Novel.aspx">小说</a></li>
+            <li><a href="History.aspx">历史</a></li>
+            <li><a href="Eco.aspx">经济</a></li>
+            <li><a href="Doc.aspx">医学</a></li>
+            <li><a href="Psy.aspx">心理</a></li>
+        </ul>
+            
+
+            
+        </div>
+
+        <div class="div4">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
