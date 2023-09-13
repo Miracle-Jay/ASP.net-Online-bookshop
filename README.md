@@ -1,6 +1,8 @@
 # ASP.net-Online-bookshop
 基于ASP.net开发的网上书店项目
 
+演示视频为项目所有功能展示
+
 sql文件为数据库文件
 
 功能如下：
